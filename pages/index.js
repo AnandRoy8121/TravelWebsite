@@ -30,7 +30,6 @@ export default function Home() {
       </Head>
       <div className='w-full h-screen'>
         <img className='top-0 left-0 w-full h-screen object-cover' src="/pictures/hero.jpg" alt="" />
-        <Navbar companyName={"VizagTravel"}/>
         <Hero/>
         <PlanTrip/>
         <ImageSlider/>

@@ -1,9 +1,12 @@
+import Tours from '@/components/Tours'
 import React from 'react'
 
-const BookTour = () => {
+const bookTour = () => {
   return (
-    <div>BookTour</div>
+    <div>
+        <Tours/>
+    </div>
   )
 }
 
-export default BookTour
+export default bookTour

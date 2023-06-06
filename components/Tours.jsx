@@ -1,5 +1,6 @@
 import React from 'react'
 import Tour from './Tour'
+import Link from 'next/link'
 
 const Tours = () => {
     const tours =[
@@ -27,12 +28,12 @@ const Tours = () => {
             price:500,
             id:4
         },
-        {
-            image:'/pictures/Rushikonda.jpg',
-            tourName:"Kailasgiri tour",
-            price:150,
-            id:5
-        }
+        // {
+        //     image:'/pictures/Rushikonda.jpg',
+        //     tourName:"Kailasgiri tour",
+        //     price:150,
+        //     id:5
+        // }
     ]
   return (
     <>
@@ -47,6 +48,7 @@ const Tours = () => {
                 <Tour img={tour.image} tourName={tour.tourName} price={tour.price} id={tour.id}/>
             </div>
         )})}
+        <Link href={`/bookTour`}><button className='bg-blue-600 text-center w-full px-4 py-2 text-xl font-bold text-white rounded-lg hover:bg-blue-800'>Show More</button></Link>
     </div>
     </>
   )

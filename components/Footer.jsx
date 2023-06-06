@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className='bg-blue-900 text-gray-200 w-full p-4 mx-auto mt-10'>
         <div className='grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-300'>
-            <div className='animate__animated animate__bounceInLeft animate__delay-1s  wow'>
+            <div className=''>
                 <h3 className='font-semibold uppercase'>Araku Tour</h3>
                 <ul>
                     <li className='p-2'>Lorem1</li>
@@ -17,7 +17,7 @@ const Footer = () => {
                     <li className='p-2'>Lorem5</li>
                 </ul>
             </div>
-            <div className='animate__animated animate__bounceInLeft animate__delay-2s  wow'>
+            <div className=''>
                 <h3 className='font-semibold uppercase'>Rushikonda Tour</h3>
                 <ul>
                     <li className='p-2'>Lorem1</li>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <li className='p-2'>Lorem5</li>
                 </ul>
             </div>
-            <div className='animate__animated animate__bounceInLeft animate__delay-3s  wow'>
+            <div className=''>
                 <h3 className='font-semibold uppercase'>Tirupati Tour</h3>
                 <ul>
                     <li className='p-2'>Lorem1</li>
@@ -37,7 +37,7 @@ const Footer = () => {
                     <li className='p-2'>Lorem5</li>
                 </ul>
             </div>
-            <div className='animate__animated animate__bounceInLeft animate__delay-3s  wow'>
+            <div className=''>
                 <h3 className='font-semibold uppercase'>City Tour</h3>
                 <ul>
                     <li className='p-2'>Lorem1</li>
@@ -62,8 +62,8 @@ const Footer = () => {
             </div>
         </div>
         <div className='p-2 flex flex-col sm:flex-row mt-2 justify-between'>
-            <h3 className='mt-2 text-xl font-bold animate__animated animate__bounceInRight animate__delay-1s  wow'>Follows Us on</h3>
-            <div className='flex justify-between animate__animated animate__bounceInLeft animate__delay-2s  wow'>
+            <h3 className='mt-2 text-xl font-bold '>Follows Us on</h3>
+            <div className='flex justify-between'>
             <FaFacebook className='m-2 cursor-pointer' size={30}/>
             <FaInstagram className='m-2 cursor-pointer' size={30}/>
             <FaTwitter className='m-2 cursor-pointer' size={30}/>
