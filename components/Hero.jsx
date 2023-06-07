@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="flex bg-white/50 rounded-lg drop-shadow-xl animate__animated animate__bounceInLeft animate__slow">
         <div className="flex flex-col gap-4">
           <ul className="flex flex-row gap-4 items-center justify-center mx-4 my-4 px-4 py-2">
-            <li><WhatsAppIcon fontSize="large" className="text-green-400 cursor-pointer duration-100 translate-x-2 hover:scale-125"/></li>
+            <li><WhatsAppIcon fontSize="large" className="text-green-500 cursor-pointer duration-100 translate-x-2 hover:scale-125"/></li>
             <li><LinkedInIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
             <li><FacebookIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
             <li><TwitterIcon fontSize="large" className="text-blue-400 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
@@ -34,7 +34,8 @@ const Hero = () => {
           </div>
           <div className="flex flex-row gap-2 mx-2 mb-4">
             <LocationOnIcon fontSize="large" className="text-black"/>
-            <h1 className="text-black font-semibold md:text-xl">29-13-11, Singh Hotel Jn,<br/> Sivalayam Down Rd, Dabagardens, Visakhapatnam-530016</h1>
+            <h1 className="text-black font-semibold md:text-xl">29-13-11, Singh Hotel Jn,<br/> Sivalayam Down Rd,
+            Lalitha Colony, Dabagardens,<br/> Visakhapatnam-530020</h1>
           </div>
 
         </div>
@@ -46,11 +47,11 @@ const Hero = () => {
               WE PROVIDE BEST
             </h1>
             <h1 className="text-2xl lg:text-5xl md:3xl font-bold text-white drop-shadow-xl">
-              SERVICES AND <span className="text-blue-600">TOURS</span>
+              SERVICES AND TOURS
             </h1>
             <h1 className="text-2xl lg:text-5xl md:text-3xl font-bold text-white drop-shadow-xl">
             AT AFFORDABLE{" "}
-              <span className="text-blue-600 underline decoration-2 decoration-sky-200">
+              <span className="underline decoration-2 decoration-sky-200">
                 PRICE
               </span>
             </h1>
@@ -61,9 +62,9 @@ const Hero = () => {
               for travelers seeking a mix of natural beauty, history, and
               culture.
             </p> */}
-            <div className="flex flex-col animate__animated animate__bounceInRight animate__slow">
+            <div className="flex mt-4 flex-col animate__animated animate__bounceInRight animate__slow">
               <Link href={"/bookTour"}>
-                <button className="bg-transparent md:px-4 md:py-2 items-center rounded-full font-semibold text-white border border-white hover:bg-white/20 hover:text-blue-800 md:text-xl text-sm px-2 py-1 drop-shadow-2xl">
+                <button className="bg-transparent md:px-4 md:py-2 items-center rounded-full font-bold text-white border border-white hover:bg-white/30 hover:text-blue-800 md:text-xl text-sm px-2 py-1 drop-shadow-2xl">
                   Book A Service
                 </button>
               </Link>

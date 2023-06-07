@@ -29,7 +29,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='w-full h-screen'>
-        <img className='top-0 left-0 w-full h-screen object-cover' src="/pictures/hero.jpg" alt="" />
+        {/* <img className='top-0 left-0 w-full h-screen object-cover' src="/pictures/hero.jpg" alt="" /> */}
+        <video className='top-10 left-0 w-full h-screen object-cover' autoPlay muted loop src="/pictures/beach.mp4" alt=""></video>
         <Hero/>
         <PlanTrip/>
         <ImageSlider/>
