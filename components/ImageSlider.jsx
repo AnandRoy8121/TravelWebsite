@@ -47,7 +47,7 @@ const ImageSlider = () => {
     //     setSlide(slide=> slide ===Images.length-1?0:slide+1)
     // }, 2000);
   return (
-    <div className='max-w-[1000px] h-[400px] w-full m-auto py-6 px-4 relative group mt-5'>
+    <div className='h-[500px] w-full m-auto py-6 px-4 relative group mt-5'>
         <div className='w-full h-full bg-cover bg-center rounded-2xl'
          style={{backgroundImage:`url(${Images[slide].image})`}}>
          </div>

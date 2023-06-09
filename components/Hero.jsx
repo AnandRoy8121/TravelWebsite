@@ -12,8 +12,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-4 absolute w-full h-[calc(100%-3rem)] top-12 md:flex-row">
-      <div className="flex flex-col w-full h-full md:flex-row justify-center items-center">
+        // <div className="flex flex-col gap-4 absolute w-full h-[calc(100%-3rem)] top-12 md:flex-row">
+        <div className="flex flex-col gap-4 absolute w-full h-full top-12 md:flex-row">
+    <div className="flex flex-col w-full h-full md:flex-row justify-center items-center">
         <div className="flex justify-center items-center h-full w-1/2 m-4">
         <div className="flex bg-white/50 rounded-lg drop-shadow-xl animate__animated animate__bounceInLeft animate__slow">
         <div className="flex flex-col gap-4">
@@ -65,7 +66,7 @@ const Hero = () => {
             <div className="flex mt-4 flex-col animate__animated animate__bounceInRight animate__slow">
               <Link href={"/bookTour"}>
                 <button className="bg-transparent md:px-4 md:py-2 items-center rounded-full font-bold text-white border border-white hover:bg-white/30 hover:text-blue-800 md:text-xl text-sm px-2 py-1 drop-shadow-2xl">
-                  Book A Service
+                  Book A Tour
                 </button>
               </Link>
             </div>
