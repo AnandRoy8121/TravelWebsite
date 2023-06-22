@@ -1,4 +1,16 @@
-[33mcommit efad6397070c048aaf0c8f2cd41d4607cc482135[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+[33mcommit 2c43825439dfefc822fa30a0f813a1b26b9752dc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: AnandRoy8121 <anandroy151997@gmail.com>
+Date:   Tue Jun 13 09:51:24 2023 +0530
+
+    Added Enquiry section in Vehicle and Tours Page
+
+[33mcommit 87eb563f65f23e856c12216a5a01634082a02ac9[m
+Author: AnandRoy8121 <anandroy151997@gmail.com>
+Date:   Fri Jun 9 10:17:53 2023 +0530
+
+    Added tour page and fixed some bugs
+
+[33mcommit efad6397070c048aaf0c8f2cd41d4607cc482135[m
 Author: AnandRoy8121 <anandroy151997@gmail.com>
 Date:   Wed Jun 7 10:25:37 2023 +0530
 
@@ -11,7 +23,7 @@ Date:   Wed Jun 7 09:01:24 2023 +0530
 
     Made changes in the Hero section and services section
 
-[33mcommit ca0fb909a7be3d30ce08f04b93ee302e320546d2[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+[33mcommit ca0fb909a7be3d30ce08f04b93ee302e320546d2[m
 Author: AnandRoy8121 <anandroy151997@gmail.com>
 Date:   Tue Jun 6 15:40:27 2023 +0530
 

@@ -150,12 +150,21 @@ const Tours = () => {
         </div>
       </div>
       {enquiry && (
-        <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
-          <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
+        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
+          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-2xl text-center decoration underline">
-                Book Now
+                Send Enquiry By Filling Below
               </h1>
+              <Datepicker
+                className="z-40"
+                value={value}
+                onChange={handleValueChange}
+                useRange={false}
+                placeholder={"Enter Travel Dates"}
+                separator={"to"}
+              />
               <input
                 className="rounded-lg px-4 py-2"
                 type="text"
@@ -170,11 +179,7 @@ const Tours = () => {
                 id="person"
                 placeholder="Travellers"
               />
-              <Datepicker
-                className="z-40"
-                value={value}
-                onChange={handleValueChange}
-              />
+              
 
               <input
                 className="rounded-lg px-4 py-2"
