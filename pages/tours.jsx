@@ -193,8 +193,14 @@ const Tours = () => {
       {enquiry && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="w-screen flex h-screen absolute top-[50%] my-auto z-[100]">
           <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
+=======
+        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
+          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
+>>>>>>> main
 =======
         // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
@@ -211,8 +217,11 @@ const Tours = () => {
               </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Input Name */}
 =======
+=======
+>>>>>>> main
 =======
 >>>>>>> main
               <Datepicker
@@ -224,6 +233,9 @@ const Tours = () => {
                 separator={"to"}
               />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 =======
 >>>>>>> main
@@ -248,6 +260,7 @@ const Tours = () => {
               />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Enter date */}
               <Datepicker
                 className="z-40"
@@ -256,6 +269,8 @@ const Tours = () => {
               />
             {/* Input Email */}
 =======
+=======
+>>>>>>> main
 =======
 >>>>>>> main
               
