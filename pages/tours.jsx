@@ -191,13 +191,30 @@ const Tours = () => {
         </div>
       </div>
       {enquiry && (
+<<<<<<< HEAD
         <div className="w-screen flex h-screen absolute top-[50%] my-auto z-[100]">
           <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
+=======
+        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
+          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
+>>>>>>> main
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-2xl text-center decoration underline">
-                Book Now
+                Send Enquiry By Filling Below
               </h1>
+<<<<<<< HEAD
               {/* Input Name */}
+=======
+              <Datepicker
+                className="z-40"
+                value={value}
+                onChange={handleValueChange}
+                useRange={false}
+                placeholder={"Enter Travel Dates"}
+                separator={"to"}
+              />
+>>>>>>> main
               <input
                 className="rounded-lg px-4 py-2"
                 type="text"
@@ -217,6 +234,7 @@ const Tours = () => {
                 value={personCount}
                 onChange={(e) => setPersonCount(e.target.value)}
               />
+<<<<<<< HEAD
               {/* Enter date */}
               <Datepicker
                 className="z-40"
@@ -224,6 +242,10 @@ const Tours = () => {
                 onChange={handleValueChange}
               />
             {/* Input Email */}
+=======
+              
+
+>>>>>>> main
               <input
                 className="rounded-lg px-4 py-2"
                 type="email"

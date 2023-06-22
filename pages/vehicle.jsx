@@ -82,57 +82,64 @@ const Vehicle = () => {
         </div>
       </div>
       {enquiry &&
-        <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
-        <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
-            <div className="flex flex-col gap-5">
-              <h1 className="font-bold text-2xl text-center decoration underline">
-                Book Now
-              </h1>
-              <input
-                className="rounded-lg px-4 py-2"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-              />
-              <input
-                className="rounded-lg px-4 py-2"
-                type="number"
-                name="person"
-                id="person"
-                placeholder="Travellers"
-              />
-              <Datepicker
-                className="z-40"
-                value={value}
-                onChange={handleValueChange}
-              />
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
+        <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
+          <div className="flex flex-col gap-5">
+            <h1 className="font-bold text-2xl text-center decoration underline">
+              Send Enquiry By Filling Below
+            </h1>
+            <Datepicker
+              className="z-40"
+              value={value}
+              onChange={handleValueChange}
+              useRange={false}
+              placeholder={"Enter Travel Dates"}
+              separator={"to"}
+            />
+            <input
+              className="rounded-lg px-4 py-2"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+            />
+            <input
+              className="rounded-lg px-4 py-2"
+              type="number"
+              name="person"
+              id="person"
+              placeholder="Travellers"
+            />
+            
 
-              <input
-                className="rounded-lg px-4 py-2"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-              />
-              <input
-                className="rounded-lg px-4 py-2"
-                type="text"
-                name="phone"
-                id="phone"
-                placeholder="Phone"
-              />
-            </div>
+            <input
+              className="rounded-lg px-4 py-2"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <input
+              className="rounded-lg px-4 py-2"
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+            />
+          </div>
 
-            <Link href={"#"}>
-              <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white">
-                Book
-              </button>
-            </Link>
-          </div>
-          <div className="absolute top-5 right-5 md:right-10 font-bold text-white text-2xl cursor-pointer" onClick={()=>setEnquiry(!enquiry)}>
-            X
-          </div>
+          <Link href={"#"}>
+            <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white">
+              Book
+            </button>
+          </Link>
+        </div>
+        <div
+          className="absolute top-5 right-5 md:right-10 font-bold text-white text-2xl cursor-pointer"
+          onClick={() => setEnquiry(!enquiry)}
+        >
+          X
+        </div>
       </div>
       }
     </Layout>
