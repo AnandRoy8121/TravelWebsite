@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const Tours = () => {
   const [enquiry, setEnquiry] = useState(false);
+
+  const [name, setName] = useState('');
+    const [personCount, setPersonCount] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [tourId, setTourId] = useState('');
+    const [tourName, setTourName] = useState('');
+
   const tours = [
     {
       name: "Vizag Local Site Seeing 14 Points",
@@ -97,8 +105,41 @@ const Tours = () => {
     console.log("newValue:", newValue);
     setValue(newValue);
   };
+
+  const handleEnquirySubmit = (id,name)=>{
+    setEnquiry(true)
+    setTourId(id)
+    setTourName(name)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, personCount, email, phone, tourId,tourName,value }),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        setEnquiry(false)
+        // Handle success, show a success message, or redirect the user
+      } else {
+        console.log('Failed to send email');
+        // Handle error, show an error message, or redirect the user
+      }
+    } catch (error) {
+      console.log('Failed to send email', error);
+      // Handle error, show an error message, or redirect the user
+    }
+  };
+
   return (
-    <Layout>
+    <Layout className='relative'>
       <div className="h-full w-full">
         {/* Top Section */}
         <div
@@ -139,7 +180,7 @@ const Tours = () => {
                     </div>
                     <button
                       className="px-10 py-2 bg-blue-400 font-semibold text-white rounded-md shadow-md hover:bg-blue-600"
-                      onClick={() => setEnquiry(true)}
+                      onClick={() => handleEnquirySubmit(tour.id,tour.name)}
                     >
                       Enquiry
                     </button>
@@ -150,50 +191,62 @@ const Tours = () => {
         </div>
       </div>
       {enquiry && (
-        <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
+        <div className="w-screen flex h-screen absolute top-[50%] my-auto z-[100]">
           <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-2xl text-center decoration underline">
                 Book Now
               </h1>
+              {/* Input Name */}
               <input
                 className="rounded-lg px-4 py-2"
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
+              {/* Input Person Count */}
               <input
                 className="rounded-lg px-4 py-2"
                 type="number"
                 name="person"
                 id="person"
                 placeholder="Travellers"
+                value={personCount}
+                onChange={(e) => setPersonCount(e.target.value)}
               />
+              {/* Enter date */}
               <Datepicker
                 className="z-40"
                 value={value}
                 onChange={handleValueChange}
               />
-
+            {/* Input Email */}
               <input
                 className="rounded-lg px-4 py-2"
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {/* Input Phone */}
               <input
                 className="rounded-lg px-4 py-2"
                 type="text"
                 name="phone"
                 id="phone"
                 placeholder="Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
 
             <Link href={"#"}>
-              <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white">
+              <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white" onClick={handleSubmit}>
                 Book
               </button>
             </Link>
