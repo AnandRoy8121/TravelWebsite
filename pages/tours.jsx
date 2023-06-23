@@ -191,39 +191,16 @@ const Tours = () => {
         </div>
       </div>
       {enquiry && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="w-screen flex h-screen absolute top-[50%] my-auto z-[100]">
-          <div className="flex w-full md:w-1/2 flex-col gap-5 h-screen bg-blue-100 items-center mx-auto py-10">
-=======
-        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
+
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
-          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
->>>>>>> main
-=======
-        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
-          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
->>>>>>> main
-=======
-        // <div className="w-screen flex h-screen absolute top-16 my-auto bg-black/80 z-[100]">
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
-          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
->>>>>>> main
+          <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10">
+
+        
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-2xl text-center decoration underline">
                 Send Enquiry By Filling Below
               </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               {/* Input Name */}
-=======
-=======
->>>>>>> main
-=======
->>>>>>> main
               <Datepicker
                 className="z-40"
                 value={value}
@@ -232,13 +209,6 @@ const Tours = () => {
                 placeholder={"Enter Travel Dates"}
                 separator={"to"}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> main
-=======
->>>>>>> main
               <input
                 className="rounded-lg px-4 py-2"
                 type="text"
@@ -258,24 +228,7 @@ const Tours = () => {
                 value={personCount}
                 onChange={(e) => setPersonCount(e.target.value)}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {/* Enter date */}
-              <Datepicker
-                className="z-40"
-                value={value}
-                onChange={handleValueChange}
-              />
             {/* Input Email */}
-=======
-=======
->>>>>>> main
-=======
->>>>>>> main
-              
-
->>>>>>> main
               <input
                 className="rounded-lg px-4 py-2"
                 type="email"
@@ -310,6 +263,7 @@ const Tours = () => {
             X
           </div>
         </div>
+        
       )}
     </Layout>
   );

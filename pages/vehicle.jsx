@@ -6,6 +6,13 @@ import Link from "next/link";
 
 const Vehicle = () => {
   const [enquiry, setEnquiry] = useState(false);
+
+  const [name, setName] = useState('');
+    const [personCount, setPersonCount] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [tourId, setTourId] = useState('');
+    const [tourName, setTourName] = useState('');
   const vehicles = [
     {
       name: "Seden/Dzire/Vista",
@@ -46,7 +53,39 @@ const Vehicle = () => {
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
     setValue(newValue);
+  };
+
+  const handleEnquirySubmit = (id,name)=>{
+    setEnquiry(true)
+    setTourId(id)
+    setTourName(name)
   }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, personCount, email, phone, tourId,tourName,value }),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        setEnquiry(false)
+        // Handle success, show a success message, or redirect the user
+      } else {
+        console.log('Failed to send email');
+        // Handle error, show an error message, or redirect the user
+      }
+    } catch (error) {
+      console.log('Failed to send email', error);
+      // Handle error, show an error message, or redirect the user
+    }
+  };
   return (
     <Layout>
       <div className="h-full w-full">
@@ -72,7 +111,7 @@ const Vehicle = () => {
                 <p>Capacity:</p>
                 <p>{vehicle.capacity}</p>
               </div>
-              <button className="bg-blue-500 hover:bg-blue-700 rounded-md text-white font-semibold" onClick={()=>setEnquiry(true)}>
+              <button className="bg-blue-500 hover:bg-blue-700 rounded-md text-white font-semibold" onClick={()=>handleEnquirySubmit(vehicle.id,vehicle.name)}>
                 Enquiry
               </button>
             </div>
@@ -83,11 +122,14 @@ const Vehicle = () => {
       </div>
       {enquiry &&
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-[100]">
-        <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10 rounded-lg shadow-lg">
+        <div className="flex w-full md:w-1/2 flex-col gap-5 bg-blue-100 items-center mx-auto py-10">
+
+      
           <div className="flex flex-col gap-5">
             <h1 className="font-bold text-2xl text-center decoration underline">
               Send Enquiry By Filling Below
             </h1>
+            {/* Input Name */}
             <Datepicker
               className="z-40"
               value={value}
@@ -102,34 +144,43 @@ const Vehicle = () => {
               name="name"
               id="name"
               placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
+            {/* Input Person Count */}
             <input
               className="rounded-lg px-4 py-2"
               type="number"
               name="person"
               id="person"
               placeholder="Travellers"
+              value={personCount}
+              onChange={(e) => setPersonCount(e.target.value)}
             />
-            
-
+          {/* Input Email */}
             <input
               className="rounded-lg px-4 py-2"
               type="email"
               name="email"
               id="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            {/* Input Phone */}
             <input
               className="rounded-lg px-4 py-2"
               type="text"
               name="phone"
               id="phone"
               placeholder="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
           </div>
 
           <Link href={"#"}>
-            <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white">
+            <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white" onClick={handleSubmit}>
               Book
             </button>
           </Link>
