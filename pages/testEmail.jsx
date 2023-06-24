@@ -19,14 +19,14 @@ const testEmail = () => {
         });
   
         if (response.ok) {
-          console.log('Email sent successfully');
+          //console.log('Email sent successfully');
           // Handle success, show a success message, or redirect the user
         } else {
-          console.log('Failed to send email');
+          //console.log('Failed to send email');
           // Handle error, show an error message, or redirect the user
         }
       } catch (error) {
-        console.log('Failed to send email', error);
+        //console.log('Failed to send email', error);
         // Handle error, show an error message, or redirect the user
       }
     };

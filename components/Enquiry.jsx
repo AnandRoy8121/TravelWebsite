@@ -9,7 +9,6 @@ const Enquiry = () => {
       });
     
       const handleValueChange = (newValue) => {
-        console.log("newValue:", newValue);
         setValue(newValue);
       }
   return (

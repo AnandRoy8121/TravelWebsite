@@ -19,15 +19,15 @@ const Hero = () => {
         <div className="flex bg-white/50 rounded-lg drop-shadow-xl animate__animated animate__bounceInLeft animate__slow">
         <div className="flex flex-col gap-4">
           <ul className="flex flex-row gap-4 items-center justify-center mx-4 my-4 px-4 py-2">
-            <li><WhatsAppIcon fontSize="large" className="text-green-500 cursor-pointer duration-100 translate-x-2 hover:scale-125"/></li>
-            <li><LinkedInIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
-            <li><FacebookIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
-            <li><TwitterIcon fontSize="large" className="text-blue-400 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
-            <li><InstagramIcon fontSize="large" className="text-red-500 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li>
+            {/* <a href="#"><li><WhatsAppIcon fontSize="large" className="text-green-500 cursor-pointer duration-100 translate-x-2 hover:scale-125"/></li></a> */}
+            <a href="https://www.linkedin.com/in/northsouth-tours-and-travels-365914280/" target="_blank"><li><LinkedInIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li></a>
+            <a href="https://www.facebook.com/profile.php?id=100093822167607" target="_blank"><li><FacebookIcon fontSize="large" className="text-blue-700 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li></a>
+            <a href="https://twitter.com/NorthSouthTandT" target="_blank"><li><TwitterIcon fontSize="large" className="text-blue-400 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li></a>
+            <a href="https://www.instagram.com/northsouthtandt/" target="_blank"><li><InstagramIcon fontSize="large" className="text-red-500 cursor-pointer duration-75 translate-x-2 hover:scale-125"/></li></a>
           </ul>
           <div className="flex flex-row gap-2 mx-2">
             <PhoneIphoneIcon fontSize="large" className="text-black"/>
-            <h1 className="text-black font-semibold md:text-xl">+91 123456789</h1>
+            <h1 className="text-black font-semibold md:text-xl">+91 7981321157</h1>
           </div>
           <div className="flex flex-row gap-2 mx-2">
             <MailOutlineIcon fontSize="large" className="text-black"/>
