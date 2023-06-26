@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BiMenuAltRight } from "react-icons/Bi";
+import MenuIcon from '@mui/icons-material/Menu';
 import "animate.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -49,7 +49,7 @@ const Navbar = ({ companyName }) => {
 
 <div className="flex justify-center items-center lg:hidden">
 
-      <BiMenuAltRight onClick={handleNav} size={30} className='text-white z-50 cursor-pointer'/>
+      <MenuIcon onClick={handleNav} fontSize="large" className='text-white z-50 cursor-pointer'/>
       <div className={nav ?'fixed top-0 left-0 z-40 text-gray-300 w-full h-screen bg-transparent/80 px-4 py-7 flex-col ease-out duration-700':'absolute z-10 top-0 left-[-100%] duration-1000 ease-in h-screen'}>
             <ul className='flex flex-col items-center justify-center w-full h-full'>
                 <Link href={'/tours'}><li className='font-bold text-2xl p-4 duration-75 translate-x-2 hover:scale-125 cursor-pointer'>Tour Packages</li></Link>

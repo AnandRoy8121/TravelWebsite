@@ -169,9 +169,9 @@ const Tours = () => {
                       Places covered
                     </h2>
                     <div className="flex flex-wrap gap-3 mt-4">
-                      {tour.places.map((place) => {
+                      {tour.places.map((place,i) => {
                         return (
-                          <p className="bg-blue-50 px-2 rounded-md shadow-md py-1 font-semibold">
+                          <p className="bg-blue-50 px-2 rounded-md shadow-md py-1 font-semibold" key={i}>
                             {place}
                           </p>
                         );

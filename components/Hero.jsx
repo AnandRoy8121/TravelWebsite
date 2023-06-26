@@ -36,7 +36,8 @@ const Hero = () => {
           <div className="flex flex-row gap-2 mx-2 mb-4">
             <LocationOnIcon fontSize="large" className="text-black"/>
             <h1 className="text-black font-semibold md:text-xl">29-13-11, Singh Hotel Jn,<br/> Sivalayam Down Rd,
-            Lalitha Colony, Dabagardens,<br/> Visakhapatnam-530020</h1>
+            Lalitha Colony, Dabagardens,<br/> opp.Alluri Sitarama Raju Vigyan Kendra
+            <br/> Visakhapatnam-530020</h1>
           </div>
 
         </div>

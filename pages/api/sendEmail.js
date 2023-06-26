@@ -1,7 +1,6 @@
 // pages/api/sendEmail.js
 
 import nodemailer from 'nodemailer';
-import ejs from 'ejs';
 import fs from 'fs';
 import path from 'path';
 

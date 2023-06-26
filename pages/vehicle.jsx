@@ -104,7 +104,7 @@ const Vehicle = () => {
           <div
             className="flex w-full md:w-1/3 h-1/3 bg-cover bg-center p-4 bg-white shadow-lg rounded-md mx-5 my-4 duration-100 hover:scale-110"
             style={{ backgroundImage: `url(${vehicle.img})` }}
-          >
+          key={vehicle.id}>
             <div className="flex flex-col gap-2 px-4 py-2 my-auto mx-auto bg-black/50 justify-center rounded-md">
               <h1 className="text-white font-bold">{vehicle.name}</h1>
               <div className="flex flex-row text-white font-semibold justify-evenly">

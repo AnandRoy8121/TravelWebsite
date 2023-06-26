@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {MdKeyboardArrowLeft,MdKeyboardArrowRight} from "react-icons/md";
-import {GoPrimitiveDot} from "react-icons/Go";
 const ImageSlider = () => {
     const [slide, setSlide] = useState(0)
     useEffect(() => {
@@ -61,7 +60,7 @@ const ImageSlider = () => {
             {
                 Images.map((slide,slideIndex)=>(
                     <div className='cursor-pointer' key={slideIndex} onClick={()=>setSlide(slideIndex)}>
-                        <GoPrimitiveDot size={20}/>
+                        <p className='text-4xl'>.</p>
                     </div>
                 ))
             }

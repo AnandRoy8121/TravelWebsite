@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import {BsFillTelephoneFill} from "react-icons/Bs";
-import {AiOutlineMail} from "react-icons/Ai";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const Footer = () => {
   return (
@@ -51,14 +51,14 @@ const Footer = () => {
                 <h3 className='p-2 uppercase font-semibold text-3xl decoration underline'>Contact Us</h3>
                 
                 <div className='flex items-center'>
-                    <BsFillTelephoneFill className='m-2 cursor-pointer' size={20}/>
+                <PhoneIphoneIcon fontSize="large" className="text-white"/>
                 <p className='p-2 text-xl font-semibold'>+91 7981321157</p>
                 </div>
                 <div className='flex items-center'>
-                    <AiOutlineMail className='m-2 cursor-pointer' size={20}/>
-                <p className='p-2 text-xl font-semibold'>Contact@northsouthtourstravels.com</p>
+                <MailOutlineIcon fontSize="large" className="text-white"/>
+                <p className='p-2 md:text-xl text-sm font-semibold'>Contact@northsouthtourstravels.com</p>
                 </div>
-                <p className='text-xl font-semibold mt-5'>&copy; VizagTravel {new Date().getFullYear()}</p>
+                <p className='text-xl font-bold mt-5'>&copy; NorthSouth Tours&Travels {new Date().getFullYear()}</p>
             </div>
         </div>
         <div className='p-2 flex flex-col sm:flex-row mt-2 justify-between'>

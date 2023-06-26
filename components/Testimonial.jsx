@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { GoPrimitiveDot } from "react-icons/Go";
 
 const Testimonial = () => {
   const [slide, setSlide] = useState(0);
