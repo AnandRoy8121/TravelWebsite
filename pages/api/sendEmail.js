@@ -8,13 +8,26 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, personCount, email, phone, tourId,tourName,value } = req.body;
     // Create a Nodemailer transporter using your SMTP server credentials
+    console.log(req.body)
+    // const transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //       user: process.env.email,
+    //       pass: process.env.pass,
+    //     },
+    //   });
+
+
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.email,
-          pass: process.env.pass,
-        },
-      });
+      service: 'smtp',
+      host: 'smtpout.secureserver.net',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.email,
+        pass: process.env.pass,
+      },
+    });
   
 
     // Compose the email
@@ -29,7 +42,7 @@ export default async function handler(req, res) {
     // Render the email template with custom data
     //const renderedTemplate = ejs.render(emailTemplate, { tourName, name, personCount, email, phone });
     try {
-    const templatePath = path.join('./templates/', 'Emailtemplate.html');
+    const templatePath = path.resolve('./templates/Emailtemplate.html');
     const template = fs.readFileSync(templatePath, 'utf-8');
     const dateVal = JSON.parse(JSON.stringify(value))
 
@@ -62,7 +75,7 @@ export default async function handler(req, res) {
     //    ${name+" "+personCount+" "+email+" "+phone+" "+tourId+" "+tourName}`,
     // });
 
-    const adminTemplatePath = path.join('./templates/', 'adminEmailtemplate.html');
+    const adminTemplatePath = path.resolve('./templates/adminEmailtemplate.html');
     const adminTemplate = fs.readFileSync(adminTemplatePath, 'utf-8');
     const travelDateVal = JSON.parse(JSON.stringify(value))
 

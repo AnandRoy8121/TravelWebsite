@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import "animate.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = ({ companyName }) => {
   const router = useRouter();
@@ -42,9 +43,12 @@ const Navbar = ({ companyName }) => {
       }`}
     >
       <Link href={"/"}>
-        <h1 className="text-white font-bold mx-10 text-2xl z-50 cursor-pointer py-4">
+        <div className="flex gap-2 text-white font-bold mx-10 text-2xl z-50 cursor-pointer py-4">
+        <Image className="rounded-[100%]" src={'/northsouthtourstravelsLOGO.jpeg'} width={50} height={50}/>
+        <h1 >
           {companyName}
         </h1>
+        </div>
       </Link>
 
 <div className="flex justify-center items-center lg:hidden">
