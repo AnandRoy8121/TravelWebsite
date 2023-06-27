@@ -27,7 +27,7 @@ const Hero = () => {
           </ul>
           <div className="flex flex-row gap-2 mx-2">
             <PhoneIphoneIcon fontSize="large" className="text-black"/>
-            <h1 className="text-black font-semibold md:text-xl">+91 7981321157</h1>
+            <h1 className="text-black font-semibold md:text-xl">+91 7981321157 / +91 6281430673</h1>
           </div>
           <div className="flex flex-row gap-2 mx-2">
             <MailOutlineIcon fontSize="large" className="text-black"/>
@@ -35,8 +35,8 @@ const Hero = () => {
           </div>
           <div className="flex flex-row gap-2 mx-2 mb-4">
             <LocationOnIcon fontSize="large" className="text-black"/>
-            <h1 className="text-black font-semibold md:text-xl">29-13-11, Singh Hotel Jn,<br/> Sivalayam Down Rd,
-            Lalitha Colony, Dabagardens,<br/> opp.Alluri Sitarama Raju Vigyan Kendra
+            <h1 className="text-black font-semibold md:text-xl">29-13-11, Lalitha Colony,<br/>
+            opp.Alluri Sitarama Raju Vigyan Kendra, Dabagardens,
             <br/> Visakhapatnam-530020</h1>
           </div>
 

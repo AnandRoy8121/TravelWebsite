@@ -8,7 +8,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, personCount, email, phone, tourId,tourName,value } = req.body;
     // Create a Nodemailer transporter using your SMTP server credentials
-    console.log(req.body)
     // const transporter = nodemailer.createTransport({
     //     service: 'gmail',
     //     auth: {
