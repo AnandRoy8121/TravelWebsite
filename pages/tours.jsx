@@ -2,10 +2,11 @@ import Layout from "@/components/Layout";
 import React, { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 import Link from "next/link";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 const Tours = () => {
   const [enquiry, setEnquiry] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState('');
     const [personCount, setPersonCount] = useState('');
     const [email, setEmail] = useState('');
@@ -113,6 +114,7 @@ const Tours = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const response = await fetch('/api/sendEmail', {
@@ -126,6 +128,9 @@ const Tours = () => {
       if (response.ok) {
         //console.log('Email sent successfully');
         setEnquiry(false)
+        setIsLoading(false);
+        
+        
         // Handle success, show a success message, or redirect the user
       } else {
         //console.log('Failed to send email');
@@ -134,6 +139,7 @@ const Tours = () => {
     } catch (error) {
       //console.log('Failed to send email', error);
       // Handle error, show an error message, or redirect the user
+      setIsLoading(true);
     }
   };
 
@@ -147,6 +153,7 @@ const Tours = () => {
         >
           <h1 className="text-white text-6xl font-bold">Tours</h1>
         </div>
+        
         {/* Bottom Section */}
         <div className="flex flex-col w-full h-full mt-5 px-10 py-10 gap-2">
           {!enquiry &&
@@ -249,11 +256,9 @@ const Tours = () => {
               />
             </div>
 
-            <Link href={"#"}>
               <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white" onClick={handleSubmit}>
-                Book
+              {isLoading ? <LoadingSpinner /> : 'Send Enquiry'}
               </button>
-            </Link>
           </div>
           <div
             className="absolute top-5 right-5 md:right-10 font-bold text-white text-2xl cursor-pointer"

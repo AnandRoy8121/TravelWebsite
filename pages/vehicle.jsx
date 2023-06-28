@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import Datepicker from "react-tailwindcss-datepicker";
 import Link from "next/link";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 
 const Vehicle = () => {
   const [enquiry, setEnquiry] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState('');
     const [personCount, setPersonCount] = useState('');
     const [email, setEmail] = useState('');
@@ -63,6 +64,7 @@ const Vehicle = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
       const response = await fetch('/api/sendEmail', {
@@ -76,14 +78,15 @@ const Vehicle = () => {
       if (response.ok) {
         //console.log('Email sent successfully');
         setEnquiry(false)
+        setIsLoading(false);
         // Handle success, show a success message, or redirect the user
       } else {
         //console.log('Failed to send email');
         // Handle error, show an error message, or redirect the user
       }
     } catch (error) {
-      //console.log('Failed to send email', error);
-      // Handle error, show an error message, or redirect the user
+      console.error('Error:', error);
+      setIsLoading(false);
     }
   };
   return (
@@ -179,11 +182,9 @@ const Vehicle = () => {
             />
           </div>
 
-          <Link href={"#"}>
             <button className="px-10 py-2 bg-blue-500 rounded-full font-bold text-white" onClick={handleSubmit}>
-              Book
+            {isLoading ? <LoadingSpinner /> : 'Send Enquiry'}
             </button>
-          </Link>
         </div>
         <div
           className="absolute top-5 right-5 md:right-10 font-bold text-white text-2xl cursor-pointer"
