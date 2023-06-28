@@ -629,7 +629,7 @@
                                         font-size: 20px;
                                       "
                                     >
-                                      Hi <strong>Admin</strong>!
+                                      Hi <strong>{{name}}</strong>!
                                     </p>
                                     <p
                                       style="
@@ -652,20 +652,6 @@
                                     align="center"
                                     style="padding: 0; margin: 0"
                                   >
-                                    <p
-                                      style="
-                                        margin: 0;
-                                        -webkit-text-size-adjust: none;
-                                        -ms-text-size-adjust: none;
-                                        mso-line-height-rule: exactly;
-                                        font-family: 'Exo 2', sans-serif;
-                                        line-height: 27px;
-                                        color: #666666;
-                                        font-size: 18px;
-                                      "
-                                    >
-                                      <strong>Name</strong>:{{name}}
-                                    </p>
                                     <p
                                       style="
                                         margin: 0;
@@ -820,7 +806,7 @@
                                           mso-padding-alt: 0;
                                           mso-border-alt: 10px solid #ffdda9;
                                         "
-                                        >Please contact on above details</a
+                                        >We will contact you on above details</a
                                       ></span
                                     ><!--<![endif]-->
                                   </td>
@@ -919,130 +905,71 @@
                                       "
                                     >
                                       <tr>
-                                        <a
-                                          href="https://www.facebook.com/profile.php?id=100093822167607"
-                                        class="es-button msohide"
-                                        target="_blank"
-                                        style="
-                                          mso-style-priority: 100 !important;
-                                          text-decoration: none;
-                                          -webkit-text-size-adjust: none;
-                                          -ms-text-size-adjust: none;
-                                          mso-line-height-rule: exactly;
-                                          color: #000000;
-                                          font-size: 20px;
-                                          padding: 15px 30px 15px 30px;
-                                          display: inline-block;
-                                          background: #ffdda9;
-                                          border-radius: 30px;
-                                          font-family: 'Exo 2', sans-serif;
-                                          font-weight: normal;
-                                          font-style: normal;
-                                          line-height: 24px;
-                                          width: auto;
-                                          text-align: center;
-                                          mso-padding-alt: 0;
-                                          mso-border-alt: 10px solid #ffdda9;
-                                          mso-hide: all;
-                                        "
-                                          >
-                                            <img
-                                              title="Facebook"
-                                              src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/facebook-logo-black.png"
-                                              alt="Fb"
-                                              height="32"
-                                              style="
-                                                display: block;
-                                                border: 0;
-                                                outline: none;
-                                                text-decoration: none;
-                                                -ms-interpolation-mode: bicubic;
-                                              "
-                                            /></td
-                                        ></a>
-                                        <a
-                                          href="https://twitter.com/NorthSouthTandT"
-                                        class="es-button msohide"
-                                        target="_blank"
-                                        style="
-                                          mso-style-priority: 100 !important;
-                                          text-decoration: none;
-                                          -webkit-text-size-adjust: none;
-                                          -ms-text-size-adjust: none;
-                                          mso-line-height-rule: exactly;
-                                          color: #000000;
-                                          font-size: 20px;
-                                          padding: 15px 30px 15px 30px;
-                                          display: inline-block;
-                                          background: #ffdda9;
-                                          border-radius: 30px;
-                                          font-family: 'Exo 2', sans-serif;
-                                          font-weight: normal;
-                                          font-style: normal;
-                                          line-height: 24px;
-                                          width: auto;
-                                          text-align: center;
-                                          mso-padding-alt: 0;
-                                          mso-border-alt: 10px solid #ffdda9;
-                                          mso-hide: all;
-                                        "
-                                          >
-                                            <img
-                                              title="Twitter"
-                                              src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/twitter-logo-black.png"
-                                              alt="Tw"
-                                              height="32"
-                                              style="
-                                                display: block;
-                                                border: 0;
-                                                outline: none;
-                                                text-decoration: none;
-                                                -ms-interpolation-mode: bicubic;
-                                              "
-                                            />
-                                          </td>
-                                        </a>
-                                        <a
-                                          href="https://www.instagram.com/northsouthtandt/"
-                                        class="es-button msohide"
-                                        target="_blank"
-                                        style="
-                                          mso-style-priority: 100 !important;
-                                          text-decoration: none;
-                                          -webkit-text-size-adjust: none;
-                                          -ms-text-size-adjust: none;
-                                          mso-line-height-rule: exactly;
-                                          color: #000000;
-                                          font-size: 20px;
-                                          padding: 15px 30px 15px 30px;
-                                          display: inline-block;
-                                          background: #ffdda9;
-                                          border-radius: 30px;
-                                          font-family: 'Exo 2', sans-serif;
-                                          font-weight: normal;
-                                          font-style: normal;
-                                          line-height: 24px;
-                                          width: auto;
-                                          text-align: center;
-                                          mso-padding-alt: 0;
-                                          mso-border-alt: 10px solid #ffdda9;
-                                          mso-hide: all;
-                                        "
-                                          >
-                                            <img
-                                              title="Instagram"
-                                              src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/instagram-logo-black.png"
-                                              alt="Inst"
-                                              height="32"
-                                              style="
-                                                display: block;
-                                                border: 0;
-                                                outline: none;
-                                                text-decoration: none;
-                                                -ms-interpolation-mode: bicubic;
-                                              "
-                                            /></td
-                                        ></a>
+                                        <a href="https://www.facebook.com/profile.php?id=100093822167607"><td
+                                          align="center"
+                                          valign="top"
+                                          style="
+                                            padding: 0;
+                                            margin: 0;
+                                            padding-right: 10px;
+                                          "
+                                        >
+                                          <img
+                                            title="Facebook"
+                                            src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/facebook-logo-black.png"
+                                            alt="Fb"
+                                            height="32"
+                                            style="
+                                              display: block;
+                                              border: 0;
+                                              outline: none;
+                                              text-decoration: none;
+                                              -ms-interpolation-mode: bicubic;
+                                            "
+                                          />
+                                        </td></a>
+                                        <a href="https://twitter.com/NorthSouthTandT"><td
+                                          align="center"
+                                          valign="top"
+                                          style="
+                                            padding: 0;
+                                            margin: 0;
+                                            padding-right: 10px;
+                                          "
+                                        >
+                                          <img
+                                            title="Twitter"
+                                            src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/twitter-logo-black.png"
+                                            alt="Tw"
+                                            height="32"
+                                            style="
+                                              display: block;
+                                              border: 0;
+                                              outline: none;
+                                              text-decoration: none;
+                                              -ms-interpolation-mode: bicubic;
+                                            "
+                                          />
+                                        </td></a>
+                                        <a href="https://www.instagram.com/northsouthtandt/"><td
+                                          align="center"
+                                          valign="top"
+                                          style="padding: 0; margin: 0"
+                                        >
+                                          <img
+                                            title="Instagram"
+                                            src="https://xhnoyr.stripocdn.email/content/assets/img/social-icons/logo-black/instagram-logo-black.png"
+                                            alt="Inst"
+                                            height="32"
+                                            style="
+                                              display: block;
+                                              border: 0;
+                                              outline: none;
+                                              text-decoration: none;
+                                              -ms-interpolation-mode: bicubic;
+                                            "
+                                          />
+                                        </td></a>
                                       </tr>
                                     </table>
                                   </td>
